@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dominikanki.pl - Test Duchowości</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Izolacja stylów dla WordPress */
+        #dominikanki-app-root {
+            font-family: 'Inter', sans-serif;
+            background-color: #fdfcfb;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        #dominikanki-app-root h1, 
+        #dominikanki-app-root h2, 
+        #dominikanki-app-root h3, 
+        #dominikanki-app-root .font-serif {
+            font-family: 'Merriweather', serif;
+        }
+        #dominikanki-app-root img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        /* Reset specyficzny dla WP */
+        #dominikanki-app-root * {
+            box-sizing: border-box;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.34.0",
+    "recharts": "https://esm.sh/recharts@^3.6.0"
+  }
+}
+</script>
+</head>
+<body style="margin:0">
+    <div id="dominikanki-app-root">
+        <div id="root"></div>
+    </div>
+    <!-- W WordPressie ten skrypt powinien być ładowany z odpowiednią ścieżką -->
+    <script type="module" src="./index.tsx"></script>
+</body>
+</html>
